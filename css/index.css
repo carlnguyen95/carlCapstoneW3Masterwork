@@ -388,6 +388,12 @@ header a
     color: var(--title-color);
 }
 
+.faq__item span
+{
+    font-size: 20px;
+    color: var(--title-color);
+}
+
 .faq__item p
 {
     transition: all 0.5s;
@@ -426,6 +432,7 @@ header a
     color: var(--title-color);
     font-size: 22px;
     font-weight: 700;
+    background: var(--bg-color);
 }
 
 .showcases__content .nav-tabs .nav-link:hover,
@@ -537,7 +544,7 @@ header a
 {
     width: 50px;
     height: 5px;
-    background-color: rgba(255, 255, 255, 0.486);
+    background-color: var(--bg-color);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-right: 10px;
 }

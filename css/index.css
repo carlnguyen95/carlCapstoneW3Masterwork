@@ -6,6 +6,7 @@
     --primary: #DC4F72;
     --bg-color: #FFF;
     --light-bg-color: #F7F9FC;
+    --border-color: #eee;
 }
 
 /* COMMON */
@@ -132,9 +133,9 @@ header a
 .page-nav-search
 {
     border-radius: 50%;
-    border: 1px solid rgba(233, 229, 229, 0.884);
+    border: 1px solid var(--border-color);
     background: var(--light-bg-color);
-    padding: 5px;
+    padding: 5px 7px;
     margin-right: 15px;
 }
 
@@ -174,6 +175,11 @@ header a
 .nav-item:hover .nav-link
 {
     color:var(--primary);
+}
+
+#theme-toggle:hover
+{
+    cursor: default;
 }
 
 /* CAROUSEL */
@@ -357,8 +363,8 @@ header a
 
 .faq__content img
 {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 0.5s;
 }
@@ -366,6 +372,35 @@ header a
 .faq__content img:hover
 {
     transform: translateY(-10px);
+}
+
+.faq__item
+{
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faq__item h5
+{
+    font-size: 20px;
+    color: var(--title-color);
+}
+
+.faq__item p
+{
+    transition: all 0.5s;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.faq__toggle__hidden
+{
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(50%);
 }
 
 

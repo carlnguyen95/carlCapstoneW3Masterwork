@@ -52,7 +52,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="position-fixed w-100 z-3">
       <nav class="navbar navbar-expand-lg navbar-light dark-theme-toggle">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -113,11 +113,10 @@
           <span
             id="theme-toggle"
             class="material-symbols-outlined ms-2"
-            onclick="toggleTheme()"
+            onclick="toggleThemeDark()"
           >
             dark_mode
           </span>
-          <!-- <span class="material-symbols-outlined ms-2"> clear_day </span> -->
         </div>
       </nav>
     </header>
@@ -300,7 +299,7 @@
             sodales quis. Integer sit amet mattis quam.
           </p>
         </div>
-        <div class="showcases__content">
+        <div class="showcases__content mt-5">
           <nav>
             <div
               class="nav nav-tabs justify-content-evenly"

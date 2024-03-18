@@ -4,6 +4,8 @@
     --title-color: #2C3038;
     --text-color: #5a5a5a;
     --primary: #DC4F72;
+    --bg-color: #FFF;
+    --light-bg-color: #F7F9FC;
 }
 
 /* COMMON */
@@ -22,6 +24,11 @@ body
 .container
 {
     max-width: 1200px;
+}
+
+.dark-theme-toggle
+{
+    background-color: var(--bg-color);
 }
 
 .btn-outline-primary
@@ -126,10 +133,15 @@ header a
 {
     border-radius: 50%;
     border: 1px solid rgba(233, 229, 229, 0.884);
-    background: #F7F9FC;
-    padding: 7px;
+    background: var(--light-bg-color);
+    padding: 5px;
     margin-right: 15px;
-    color: #5a5a5a;
+}
+
+.page-nav-search i
+{
+    font-size: 15px;
+    color: var(--text-color);
 }
 
 .nav-item
@@ -167,7 +179,7 @@ header a
 /* CAROUSEL */
 .carousel
 {
-    background-image: linear-gradient(to right, #FFF, rgba(255,255,255,0.9)), url("../img/banner.jpg");
+    background-image: linear-gradient(to right, var(--bg-color), rgba(255,255,255,0.9)), url("../img/banner.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -214,14 +226,14 @@ header a
 .features__item__inner
 {
     padding-right: 15px;
-    background-color: #F7F9FC;
+    background-color: var(--light-bg-color);
     padding: 3rem 2rem;
     transition: all 0.5s;
 }
 
 .features__item__inner:hover
 {
-    background-color: white;
+    background-color: var(--bg-color);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: translateY(-10px);
     cursor: pointer;
@@ -230,7 +242,7 @@ header a
 /* ABOUT US */
 .aboutUs
 {
-    background-color: #F7F9FC;
+    background-color: var(--light-bg-color);
 }
 
 .aboutUs__intro__content
@@ -269,14 +281,14 @@ header a
 
 .aboutUs__item__inner
 {
-    background-color: white;
+    background-color: var(--bg-color);
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .aboutUs__item__inner h6
 {
-    font-weight: 500;
+    font-weight: 700;
     color: var(--title-color);
 }
 
@@ -311,7 +323,7 @@ header a
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
+    color: #eee;
 }
 
 .quotes__content
@@ -319,16 +331,22 @@ header a
     width: 50%;
 }
 
+.quotes__content h3
+{
+    font-weight: 700;
+}
+
 .quotes__content button a
 {
     color: #000;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 /* Q&A */
 .faq
 {
-    background-color: #F7F9FC;
+    background-color: var(--light-bg-color);
 }
 
 .faq__title h1
@@ -410,7 +428,7 @@ header a
 /* FEEDBACKS */
 .feedbacks
 {
-    background-image: linear-gradient(to right, #FFF, rgba(255,255,255,0.9)), url("../img/b2.jpg");
+    background-image: linear-gradient(to right, var(--bg-color), rgba(255,255,255,0.9)), url("../img/b2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -425,7 +443,7 @@ header a
 
 .feedbacks__item
 {
-    background-color: white;
+    background-color: var(--bg-color);
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     border-radius: 5px;
     width: 100%;
@@ -510,7 +528,7 @@ header a
 /* FOOTER */
 footer
 {
-    background-color: #F7F9FC;
+    background-color: var(--light-bg-color);
 }
 
 .footer__content__title
@@ -546,7 +564,6 @@ footer
 
 .footer__subsribe
 {
-    background-color: white;
     border-radius: 5px;
     padding: 2em;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -568,7 +585,7 @@ footer
     height: 50px;
     padding-left: 10px;
     border: none;
-    background: #F7F9FC;
+    background: var(--light-bg-color);
     width: 70%;
     margin-right: 10px;
     border-radius: 5px;

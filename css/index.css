@@ -127,7 +127,7 @@ header a
 
 .navbar-nav .nav-link
 {
-    color: var(--title-color);
+    color: var(--text-color);
 }
 
 .page-nav-search
@@ -172,10 +172,10 @@ header a
     width: 40%;
 }
 
-.nav-item:hover .nav-link
+/* .nav-item:hover .nav-link
 {
     color:var(--primary);
-}
+} */
 
 #theme-toggle:hover
 {

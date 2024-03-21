@@ -1,5 +1,8 @@
 var root = document.querySelector(":root");
 
+/**
+ * Toggle theme to dark
+ */
 function toggleThemeDark() {
   var toggleThemeElement = document.getElementById("theme-toggle");
   root.style.setProperty("--light-bg-color", "#191C1D");
@@ -13,6 +16,9 @@ function toggleThemeDark() {
   console.log("Changed to dark mode");
 }
 
+/**
+ * Toggle theme to light
+ */
 function toggleThemeLight() {
   var toggleThemeElement = document.getElementById("theme-toggle");
   root.style.setProperty("--light-bg-color", "#F7F9FC");
@@ -26,6 +32,10 @@ function toggleThemeLight() {
   console.log("Changed to light mode");
 }
 
+/**
+ * Toggle hidden faq_item element
+ * @param {*} faq_id id number of faq_item. Ex: faq_item_1
+ */
 function toggleFaqItemDetail(faq_id)
 {
   var faq = document.querySelector(`#faq_item_${faq_id} p`);
@@ -38,5 +48,14 @@ function toggleFaqItemDetail(faq_id)
   }
   else {
     faqIcon.innerText = "expand_less";
+  }
+}
+
+function toggleExpandButton()
+{
+  var expandElements = document.getElementsByClassName("navbar-toggler-icon");
+
+  for (element of expandElements) {
+    element.classList.toggle("d-none");
   }
 }

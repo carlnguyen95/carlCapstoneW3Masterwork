@@ -56,26 +56,15 @@
   </head>
 
   <body>
-    <header class="position-fixed w-100 z-3">
-      <nav class="navbar navbar-expand-lg navbar-light dark-theme-toggle">
+    <header class="fixed-top w-100">
+      <nav class="navbar navbar-expand-lg navbar-light dark-theme-toggle h-100">
         <div class="container">
           <a class="navbar-brand" href="#">
             <i class="fa-regular fa-handshake"></i>
             Masterwork
           </a>
-          <button
-            class="navbar-toggler d-lg-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <ul class="navbar-nav ms-lg-auto mt-2 mt-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" href="#" aria-current="page"
                   >Home <span class="visually-hidden">(current)</span></a
@@ -107,12 +96,16 @@
                 <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
-            <a href="#" class="page-nav-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <button type="button" class="btn btn-outline-primary btn-lg">
-              <a href="#demourl">SCHEDULE A DEMO</a>
-            </button>
+            <div class="nav__search text-center mt-4 mt-lg-0">
+              <a href="#" class="page-nav-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+            <div class="nav__demo text-center mt-3 mt-lg-0">
+              <button type="button" class="btn btn-outline-primary btn-lg">
+                <a href="#demourl">SCHEDULE A DEMO</a>
+              </button>
+            </div>
           </div>
           <span
             id="theme-toggle"
@@ -121,6 +114,21 @@
           >
             dark_mode
           </span>
+          <button
+            class="navbar-toggler d-lg-none ms-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onclick="toggleExpandButton()"
+          >
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span
+              class="navbar-toggler-icon fa icon-close fa-times d-none"
+            ></span>
+          </button>
         </div>
       </nav>
     </header>
@@ -192,8 +200,8 @@
     <!-- ABOUT US -->
     <section class="aboutUs">
       <div class="container pt-5 pb-5">
-        <div class="aboutUs__intro row">
-          <div class="aboutUs__intro__content col-sm-6 mb-4 pe-5">
+        <div class="aboutUs__intro row align-items-center">
+          <div class="aboutUs__intro__content col-sm-6 pe-5">
             <h3 class="small-titles">ABOUT OUR COMPANY</h3>
             <h1>The Best Choice For Your Successful Business!</h1>
             <p class="mt-4 mb-5">
@@ -472,9 +480,7 @@
               aria-labelledby="nav-home-tab"
             >
               <div class="row pt-5 pe-5 ps-4">
-                <div
-                  class="showcases__details col-6 d-flex flex-column justify-content-between"
-                >
+                <div class="showcases__details col-6">
                   <h3>Why a visual identity system is more memorable</h3>
                   <p>
                     Lorem ipsum dolor sit, adipisicing elit repudiandae
@@ -483,7 +489,7 @@
                     necessitatibus consectetur modi ipsum natus accusantium sit
                     pariatur.
                   </p>
-                  <button class="btn btn-outline-primary btn-lg d-inline-block">
+                  <button class="btn btn-outline-primary btn-lg">
                     <a href="#">KNOW MORE</a>
                   </button>
                 </div>
@@ -502,9 +508,7 @@
                 <div class="col-6 showcases__image">
                   <img src="./img/b5.jpg" alt="" class="hover__up img-fluid" />
                 </div>
-                <div
-                  class="showcases__details col-6 d-flex flex-column justify-content-between"
-                >
+                <div class="showcases__details col-6">
                   <h3>Make website that looks Lorem, ipsum dolor.</h3>
                   <p>
                     Lorem ipsum dolor sit, adipisicing elit repudiandae
@@ -513,7 +517,7 @@
                     necessitatibus consectetur modi ipsum natus accusantium sit
                     pariatur.
                   </p>
-                  <button class="btn btn-outline-primary btn-lg d-inline-block">
+                  <button class="btn btn-outline-primary btn-lg">
                     <a href="#">KNOW MORE</a>
                   </button>
                 </div>
@@ -526,9 +530,7 @@
               aria-labelledby="nav-contact-tab"
             >
               <div class="row pt-5 pe-5 ps-4">
-                <div
-                  class="showcases__details col-6 d-flex flex-column justify-content-between"
-                >
+                <div class="showcases__details col-6">
                   <h3>Why a visual identity system is more memorable</h3>
                   <p>
                     Lorem ipsum dolor sit, adipisicing elit repudiandae
@@ -537,7 +539,7 @@
                     necessitatibus consectetur modi ipsum natus accusantium sit
                     pariatur.
                   </p>
-                  <button class="btn btn-outline-primary btn-lg d-inline-block">
+                  <button class="btn btn-outline-primary btn-lg">
                     <a href="#">KNOW MORE</a>
                   </button>
                 </div>

@@ -49,6 +49,7 @@ body
 {
     color: var(--primary);
     font-weight: 500;
+    font-size: 14px;
     transition: all 1s;
     text-decoration: none;
 }
@@ -102,6 +103,30 @@ button a
 
 
 /* HEADER */
+header
+{
+    height: 90px;
+    background: var(--bg-color);
+}
+
+@media screen and (max-width: 991px)
+{
+    header
+    {
+        height: auto;
+        padding: 15px 0;
+    }
+}
+
+.fixed-top
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 header a
 {
     text-decoration: none;
@@ -150,32 +175,109 @@ header a
     position: relative;
 }
 
-.navbar-nav .nav-link.active
+.navbar-nav .nav-link
+{
+    text-align: center;
+    position: relative;
+}
+
+.navbar-nav .nav-link.show
+{
+    color: var(--text-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover
 {
     color: var(--primary);
 }
 
-.nav-item .nav-link::before
+.nav-item .nav-link::before,
+.dropdown-menu .dropdown-item::before
 {
     content: "";
     background: var(--primary);
     height: 2px;
     width: 0%;
-    display: block;
     position: absolute;
     bottom: 2px;
     transition: all .5s;
 }
 
-.nav-item:hover .nav-link::before
+.nav-item .nav-link:hover::before,
+.dropdown-menu a:hover::before
 {
-    width: 40%;
+    width: 20px;
 }
 
-/* .nav-item:hover .nav-link
+.dropdown-menu
 {
-    color:var(--primary);
-} */
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-menu[data-bs-popper]
+{
+    left: -60%;
+}
+
+.dropdown-menu::before
+{
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    display: block;
+    border-right: none;
+    border-bottom: none;
+    transform: translateX(-50%) translateY(-15px) rotateZ(45deg);
+    position: absolute;
+    left: 49%;
+    z-index: 1001;
+}
+
+.dropdown-menu .dropdown-item
+{
+    color: var(--title-color);
+    text-align: center;
+    position: relative;
+}
+
+.dropdown-menu .dropdown-item:hover
+{
+    background: var(--bg-color);
+}
+
+.navbar-toggler
+{
+    background: var(--primary);
+    padding: 0.25rem;
+}
+
+.navbar-toggler .navbar-toggler-icon
+{
+    color: #fff;
+    background: transparent;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+@media (max-width: 991px)
+{
+    #theme-toggle
+    {
+        position: absolute;
+        top: 20px;
+        right: 100px;
+    }
+    .navbar-toggler
+    {
+        position: absolute;
+        top: 10px;
+        right: 40px;
+    }
+}
 
 #theme-toggle:hover
 {
@@ -190,6 +292,7 @@ header a
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 90px;
 }
 
 .carousel__content h1
@@ -397,7 +500,7 @@ header a
 
 .faq__item p
 {
-    transition: all 0.5s;
+    transition: all .5s;
     margin-bottom: 0;
     font-size: 16px;
     color: var(--text-color);
@@ -454,11 +557,6 @@ header a
 .showcases__details p
 {
     color: var(--text-color);
-}
-
-.showcases__details .btn
-{
-    width: 40%;
 }
 
 .showcases__image img

@@ -155,7 +155,7 @@ header a
     color: var(--text-color);
 }
 
-.page-nav-search
+.nav__search--link
 {
     border-radius: 50%;
     border: 1px solid var(--border-color);
@@ -164,7 +164,7 @@ header a
     margin-right: 15px;
 }
 
-.page-nav-search i
+.nav__search--link i
 {
     font-size: 15px;
     color: var(--text-color);
@@ -332,7 +332,7 @@ header a
     color: var(--text-color);
 }
 
-.features__item__inner
+.features__item--wrapper
 {
     padding-right: 15px;
     background-color: var(--light-bg-color);
@@ -340,7 +340,7 @@ header a
     transition: all 0.5s;
 }
 
-.features__item__inner:hover
+.features__item--wrapper:hover
 {
     background-color: var(--bg-color);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -389,27 +389,27 @@ header a
     padding-right: 15px;
 }
 
-.aboutUs__item__inner
+.aboutUs__numbers__item--wrapper
 {
     background-color: var(--bg-color);
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.aboutUs__item__inner h6
+.aboutUs__numbers__item--wrapper h6
 {
     font-weight: 700;
     color: var(--title-color);
 }
 
-.aboutUs__item__inner p:first-of-type
+.aboutUs__numbers__item--wrapper p:first-of-type
 {
     color: var(--primary);
     font-size: 50px;
     font-weight: 700;
 }
 
-.aboutUs__item__inner p:last-of-type
+.aboutUs__numbers__item--wrapper p:last-of-type
 {
     color: var(--text-color);
 }
@@ -506,7 +506,7 @@ header a
     color: var(--text-color);
 }
 
-.faq__toggle__hidden
+.faq__item--toggle-hidden
 {
     opacity: 0;
     max-height: 0;
@@ -549,17 +549,17 @@ header a
     font-weight: 700;
 }
 
-.showcases__details h3
+.showcases__content__details h3
 {
     color: var(--title-color);
 }
 
-.showcases__details p
+.showcases__content__details p
 {
     color: var(--text-color);
 }
 
-.showcases__image img
+.showcases__content__details--image img
 {
     border-radius: 5px;
 }
@@ -672,7 +672,7 @@ footer
     background-color: var(--light-bg-color);
 }
 
-.footer__content__title
+.footer__content--title
 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -703,25 +703,25 @@ footer
     color: var(--primary);
 }
 
-.footer__subsribe
+.footer__content--subscribe
 {
     border-radius: 5px;
     padding: 2em;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.footer__subsribe h4
+.footer__content--subscribe h4
 {
     font-size: 14px;
     color: var(--title-color);
 }
 
-.footer__subsribe p
+.footer__content--subscribe p
 {
     color: var(--text-color);
 }
 
-.footer__subsribe input
+.footer__content--subscribe input
 {
     height: 50px;
     padding-left: 10px;
@@ -738,7 +738,7 @@ footer
     color: #656f7b;
 }
 
-.footer__info .footer__copyright
+.footer__info .footer__info--copyright
 {
     color: var(--text-color);
 }

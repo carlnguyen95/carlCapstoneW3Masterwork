@@ -41,9 +41,9 @@ function toggleFaqItemDetail(faq_id)
   var faq = document.querySelector(`#faq_item_${faq_id} p`);
   var faqIcon = document.querySelector(`#faq_item_${faq_id} .faq__item__title span`);
 
-  faq.classList.toggle("faq__toggle__hidden");
+  faq.classList.toggle("faq__item--toggle-hidden");
 
-  if (faq.classList.contains("faq__toggle__hidden")) {
+  if (faq.classList.contains("faq__item--toggle-hidden")) {
     faqIcon.innerText = "expand_more";
   }
   else {

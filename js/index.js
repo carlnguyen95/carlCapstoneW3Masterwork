@@ -32,14 +32,17 @@ function toggleThemeLight() {
   console.log("Changed to light mode");
 }
 
-/**
- * Toggle hidden faq_item element
- * @param {*} faq_id id number of faq_item. Ex: faq_item_1
- */
-function toggleFaqItemDetail(faq_id)
-{
-  var faq = document.querySelector(`#faq_item_${faq_id} p`);
-  var faqIcon = document.querySelector(`#faq_item_${faq_id} .faq__item--title span`);
+/* Handle toggle faq_item detail */
+const faqContent = document.querySelector(".faq__content__details");
+faqContent.addEventListener("click", (e) => {
+  if (!e.target.closest(".faq__item--click")) return;
+
+  console.log("Clicked");
+
+  var faq_item = e.target.closest(".faq__item--click").parentElement;
+  var faq = faq_item.querySelector("p");
+  var faqIcon = faq_item.querySelector(".faq__item--title span");
+  console.log(faq_item);
 
   faq.classList.toggle("faq__item--toggle-hidden");
 
@@ -49,7 +52,7 @@ function toggleFaqItemDetail(faq_id)
   else {
     faqIcon.innerText = "expand_less";
   }
-}
+})
 
 /**
  * Toggle expand faq_item button

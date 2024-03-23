@@ -39,7 +39,7 @@ function toggleThemeLight() {
 function toggleFaqItemDetail(faq_id)
 {
   var faq = document.querySelector(`#faq_item_${faq_id} p`);
-  var faqIcon = document.querySelector(`#faq_item_${faq_id} .faq__item__title span`);
+  var faqIcon = document.querySelector(`#faq_item_${faq_id} .faq__item--title span`);
 
   faq.classList.toggle("faq__item--toggle-hidden");
 
@@ -51,6 +51,9 @@ function toggleFaqItemDetail(faq_id)
   }
 }
 
+/**
+ * Toggle expand faq_item button
+ */
 function toggleExpandButton()
 {
   var expandElements = document.getElementsByClassName("navbar-toggler-icon");

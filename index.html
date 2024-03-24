@@ -430,7 +430,7 @@
         <div class="showcases__content mt-5">
           <nav>
             <div
-              class="nav nav-tabs justify-content-evenly"
+              class="nav nav-tabs justify-content-evenly d-none d-md-flex"
               id="nav-tab"
               role="tablist"
             >
@@ -474,13 +474,28 @@
           </nav>
           <div class="tab-content" id="nav-tabContent">
             <div
+              class="nav-md-tab d-md-none active"
+              id="nav-home-md-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-home"
+              type="button"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="false"
+            >
+              <h2 class="ps-3">Project One</h2>
+              <span class="expand-arrow-down me-3"></span>
+            </div>
+            <div
               class="tab-pane fade show active"
               id="nav-home"
               role="tabpanel"
               aria-labelledby="nav-home-tab"
             >
-              <div class="row pt-5 pe-5 ps-4">
-                <div class="showcases__content__details col-6">
+              <div
+                class="row pt-3 pt-md-5 pe-3 pe-md-5 ps-3 ps-md-4 pb-5 pb-md-0"
+              >
+                <div class="showcases__content__details col-md-6">
                   <h3>Why a visual identity system is more memorable</h3>
                   <p>
                     Lorem ipsum dolor sit, adipisicing elit repudiandae
@@ -493,10 +508,25 @@
                     <a href="#">KNOW MORE</a>
                   </button>
                 </div>
-                <div class="col-6 showcases__content__details--image">
+                <div
+                  class="col-md-6 showcases__content__details--image mt-5 mt-md-0"
+                >
                   <img src="./img/b4.jpg" alt="" class="hover__up img-fluid" />
                 </div>
               </div>
+            </div>
+            <div
+              class="nav-md-tab d-md-none"
+              id="nav-profile-md-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-profile"
+              type="button"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+            >
+              <h2 class="ps-3">Project Two</h2>
+              <span class="expand-arrow-down me-3"></span>
             </div>
             <div
               class="tab-pane fade"
@@ -504,11 +534,13 @@
               role="tabpanel"
               aria-labelledby="nav-profile-tab"
             >
-              <div class="row pt-5 pe-5 ps-4">
-                <div class="col-6 showcases__content__details--image">
+              <div
+                class="row pt-3 pt-md-5 pe-3 pe-md-5 ps-3 ps-md-4 pb-5 pb-md-0"
+              >
+                <div class="col-md-6 showcases__content__details--image">
                   <img src="./img/b5.jpg" alt="" class="hover__up img-fluid" />
                 </div>
-                <div class="showcases__details col-6">
+                <div class="showcases__details col-md-6 mt-5 mt-md-0">
                   <h3>Make website that looks Lorem, ipsum dolor.</h3>
                   <p>
                     Lorem ipsum dolor sit, adipisicing elit repudiandae
@@ -524,13 +556,28 @@
               </div>
             </div>
             <div
+              class="nav-md-tab d-md-none"
+              id="nav-contact-md-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-contact"
+              type="button"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              <h2 class="ps-3">Project Three</h2>
+              <span class="expand-arrow-down me-3"></span>
+            </div>
+            <div
               class="tab-pane fade"
               id="nav-contact"
               role="tabpanel"
               aria-labelledby="nav-contact-tab"
             >
-              <div class="row pt-5 pe-5 ps-4">
-                <div class="showcases__details col-6">
+              <div
+                class="row pt-3 pt-md-5 pe-3 pe-md-5 ps-3 ps-md-4 pb-5 pb-md-0"
+              >
+                <div class="showcases__details col-md-6">
                   <h3>Why a visual identity system is more memorable</h3>
                   <p>
                     Lorem ipsum dolor sit, adipisicing elit repudiandae
@@ -543,7 +590,9 @@
                     <a href="#">KNOW MORE</a>
                   </button>
                 </div>
-                <div class="col-6 showcases__content__details--image">
+                <div
+                  class="col-md-6 showcases__content__details--image mt-5 mt-md-0"
+                >
                   <img src="./img/b6.jpg" alt="" class="hover__up img-fluid" />
                 </div>
               </div>

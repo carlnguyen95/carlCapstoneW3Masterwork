@@ -102,10 +102,25 @@
                 <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
-            <div class="nav__search text-center mt-4 mt-lg-0">
-              <a href="#" class="nav__search--link">
+            <div class="nav__search text-center mt-4 mt-lg-0" id="navSearchId">
+              <a href="#search" class="nav__search--link">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
+            </div>
+            <div class="nav__search--bg">
+              <div class="nav__search--popup">
+                <form action="" class="d-sm-flex">
+                  <input
+                    type="text"
+                    name="pageSearch"
+                    id="navSearchInputId"
+                    placeholder="Enter Keyword"
+                  /><button type="submit" class="btn btn-primary">
+                    Search
+                  </button>
+                </form>
+                <a href="#close" id="navCloseSearchId">x</a>
+              </div>
             </div>
             <div class="nav__demo text-center mt-3 mt-lg-0">
               <button type="button" class="btn btn-outline-primary btn-lg">

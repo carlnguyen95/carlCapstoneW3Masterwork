@@ -16,6 +16,25 @@ function toggleThemeDark() {
   console.log("Changed to dark mode");
 }
 
+/**
+ * Toggle theme to light
+ */
+function toggleThemeLight() {
+  var toggleThemeElement = document.getElementById("theme-toggle");
+  root.style.setProperty("--light-bg-color", "#F7F9FC");
+  root.style.setProperty("--bg-color", "#FFF");
+  root.style.setProperty("--title-color", "#2C3038");
+  root.style.setProperty("--text-color", "#5A5A5A");
+  root.style.setProperty("--border-color", "#EEE");
+  toggleThemeElement.innerText = "dark_mode";
+  toggleThemeElement.onclick = toggleThemeDark;
+  toggleThemeElement.classList.toggle("text-white");
+  console.log("Changed to light mode");
+}
+
+/**
+ * Handle search feature
+ */
 const searchBtn = document.querySelector("#navSearchId");
 const closeSearchBtn = document.querySelector("#navCloseSearchId");
 searchBtn.addEventListener("click", () => {
@@ -35,22 +54,6 @@ function toggleExpandButton()
   for (element of expandElements) {
     element.classList.toggle("d-none");
   }
-}
-
-/**
- * Toggle theme to light
- */
-function toggleThemeLight() {
-  var toggleThemeElement = document.getElementById("theme-toggle");
-  root.style.setProperty("--light-bg-color", "#F7F9FC");
-  root.style.setProperty("--bg-color", "#FFF");
-  root.style.setProperty("--title-color", "#2C3038");
-  root.style.setProperty("--text-color", "#5A5A5A");
-  root.style.setProperty("--border-color", "#EEE");
-  toggleThemeElement.innerText = "dark_mode";
-  toggleThemeElement.onclick = toggleThemeDark;
-  toggleThemeElement.classList.toggle("text-white");
-  console.log("Changed to light mode");
 }
 
 /* Handle toggle faq_item detail */

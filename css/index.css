@@ -577,49 +577,61 @@ header a
 }
 
 /* Width <= 768px */
-.showcases__content
-{
-    border: 1px solid rgb(193,193,193);
-}
-
-.nav-md-tab
-{
-    display: flex!important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid rgb(193,193,193);
-}
-
-.nav-md-tab.active
-{
-    border-bottom: 3px solid var(--primary);
-}
-
-.nav-md-tab h2
-{
-    margin-bottom: 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--title-color);
-}
-
-.nav-md-tab.active h2 
-{
-    color: var(--primary);
-}
-
 @media screen and (max-width: 768px) {
+    .showcases__content
+    {
+        border: 1px solid rgb(193,193,193);
+    }
+
+    .nav-md-tab
+    {
+        display: flex!important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgb(193,193,193);
+    }
+
+    .nav-md-tab.active
+    {
+        border-bottom: 3px solid var(--primary);
+    }
+
+    .nav-md-tab h2
+    {
+        margin-bottom: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--title-color);
+    }
+
+    .nav-md-tab.active h2 
+    {
+        color: var(--primary);
+    }
+
    .tab-pane
    {
-        transform: translateY(-100%);
-        transition: all 5s;
+        animation: fadeInDown .5s both;
    } 
 
    .tab-pane.active
    {
         transform: translateY(0);
    }
+}
+
+@keyframes fadeInDown {
+   0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -10%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    } 
 }
 /*-------------------------------------------------*/
 

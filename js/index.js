@@ -116,7 +116,7 @@ window.addEventListener("resize", () => {
       navTabActive.classList.add("active");
     }
   }
-  else {
+  else { // width > 768px
     var mdNavTabActive = document.querySelector(".nav-md-tab.active");
     if (mdNavTabActive) mdNavTabActive.classList.remove("active");
 

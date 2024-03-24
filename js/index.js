@@ -17,6 +17,18 @@ function toggleThemeDark() {
 }
 
 /**
+ * Toggle expand faq_item button
+ */
+function toggleExpandButton()
+{
+  var expandElements = document.getElementsByClassName("navbar-toggler-icon");
+
+  for (element of expandElements) {
+    element.classList.toggle("d-none");
+  }
+}
+
+/**
  * Toggle theme to light
  */
 function toggleThemeLight() {
@@ -51,14 +63,33 @@ function toggleFaqItemDetail(faq_id)
   }
 }
 
-/**
- * Toggle expand faq_item button
- */
-function toggleExpandButton()
-{
-  var expandElements = document.getElementsByClassName("navbar-toggler-icon");
+/* Handle Showcases tabs when window size is below 768px */
+var showcasesTabContent = document.querySelector("#nav-tabContent");
+showcasesTabContent.addEventListener("click", (e) => {
+  if (!e.target.closest(".nav-md-tab")) return;
 
-  for (element of expandElements) {
-    element.classList.toggle("d-none");
+  var navTab = e.target.closest(".nav-md-tab");
+  var tabId = navTab.dataset.bsTarget;
+  var tab = document.querySelector(tabId);
+  var allTabs = showcasesTabContent.getElementsByClassName("tab-pane");
+  var allNavTabs = showcasesTabContent.getElementsByClassName("nav-md-tab");
+  var activeNavTab = showcasesTabContent.querySelector(".nav-md-tab.active");
+
+  // Close all tabs then open the active tab
+  for (const navEl of allNavTabs) {
+    navEl.classList.remove("active");
+    navEl.querySelector("span").classList.add("expand-arrow-down");
+    navEl.querySelector("span").classList.remove("expand-arrow-up");
   }
-}
+  for (const element of allTabs) {
+    element.classList.remove("active", "show");
+  }
+
+  // If click on an ative tab, collapse it and do not open new one
+  if (activeNavTab === navTab) return;
+
+  navTab.classList.add("active");
+  navTab.querySelector("span").classList.remove("expand-arrow-down");
+  navTab.querySelector("span").classList.add("expand-arrow-up");
+  tab.classList.add("active", "show");
+})

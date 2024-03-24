@@ -118,9 +118,15 @@ window.addEventListener("resize", () => {
   }
   else { // width > 768px
     var mdNavTabActive = document.querySelector(".nav-md-tab.active");
-    if (mdNavTabActive) mdNavTabActive.classList.remove("active");
+    if (mdNavTabActive) {
+      mdNavTabActive.querySelector("span").classList.add("expand-arrow-down");
+      mdNavTabActive.querySelector("span").classList.remove("expand-arrow-up");
+      mdNavTabActive.classList.remove("active");
+    } 
 
     mdNavTabActive = document.getElementById(currentTabActive.getAttribute("aria-labelledby") + "-md");
     mdNavTabActive.classList.add("active");
+    mdNavTabActive.querySelector("span").classList.remove("expand-arrow-down");
+    mdNavTabActive.querySelector("span").classList.add("expand-arrow-up");
   }
 })

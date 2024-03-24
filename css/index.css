@@ -463,7 +463,14 @@ header a
 
 .quotes__content
 {
-    width: 50%;
+    width: 70%;
+}
+
+@media screen and (min-width: 992px) {
+    .quotes__content
+    {
+        width: 50%;
+    }
 }
 
 .quotes__content h3
@@ -496,6 +503,7 @@ header a
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 0.5s;
+    border-radius: 5px;
 }
 
 .faq__content img:hover

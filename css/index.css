@@ -238,11 +238,9 @@ header a
 .nav__search--popup a
 {
     color: #fff;
-    position: absolute;
+    transform: translateY(-80px) translateX(-20px);
     font-size: 30px;
     font-weight: 700;
-    top: calc((100vh - 50px) / 2 - 50px);
-    right: calc((100vw - 400px - 70px) / 2);
 }
 
 

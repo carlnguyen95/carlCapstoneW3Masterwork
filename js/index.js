@@ -96,3 +96,31 @@ showcasesTabContent.addEventListener("click", (e) => {
   navTab.querySelector("span").classList.add("expand-arrow-up");
   tab.classList.add("active", "show");
 })
+
+/* Function to check state between sizes of window */
+window.addEventListener("resize", () => {
+  var navTabActive = document.querySelector(".nav-tabs .nav-link.active");
+  var tabActiveId = navTabActive ? navTabActive.dataset.bsTarget : null;
+  var oldTabActive = document.querySelector(tabActiveId);
+  var currentTabActive = document.querySelector(".tab-pane.active");
+
+  if (window.innerWidth > 768) {
+    // If there is no active tab, switch to pre-resize active tab
+    if (!currentTabActive) {
+      oldTabActive.classList.add("active", "show");
+    }
+    // Update tab state base on medium size window state
+    else {
+      navTabActive.classList.remove("active");
+      navTabActive = document.getElementById(currentTabActive.getAttribute("aria-labelledby"));
+      navTabActive.classList.add("active");
+    }
+  }
+  else {
+    var mdNavTabActive = document.querySelector(".nav-md-tab.active");
+    if (mdNavTabActive) mdNavTabActive.classList.remove("active");
+
+    mdNavTabActive = document.getElementById(currentTabActive.getAttribute("aria-labelledby") + "-md");
+    mdNavTabActive.classList.add("active");
+  }
+})

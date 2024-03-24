@@ -16,6 +16,15 @@ function toggleThemeDark() {
   console.log("Changed to dark mode");
 }
 
+const searchBtn = document.querySelector("#navSearchId");
+const closeSearchBtn = document.querySelector("#navCloseSearchId");
+searchBtn.addEventListener("click", () => {
+  document.querySelector(".nav__search--bg").classList.remove("d-none");
+})
+closeSearchBtn.addEventListener("click", () => {
+  document.querySelector(".nav__search--bg").classList.add("d-none");
+})
+
 /**
  * Toggle expand faq_item button
  */

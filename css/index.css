@@ -262,8 +262,7 @@ header a
     color: var(--text-color);
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover
+.navbar-nav .nav-link:is(.active, :hover)
 {
     color: var(--primary);
 }
@@ -443,8 +442,6 @@ header a
 {
     border-bottom: 1px solid #656f7b;
 }
-
-
 
 
 /* CAROUSEL */
@@ -795,7 +792,6 @@ header a
 {
     border-radius: 5px;
 }
-
 
 
 /* FEEDBACKS */

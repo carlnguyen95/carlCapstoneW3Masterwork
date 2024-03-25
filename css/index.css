@@ -391,6 +391,7 @@ header a
     top: 150px;
     right: 20px;
     cursor: pointer;
+    transition: all .5s;
 }
 
 .toolbar__expand:hover
@@ -430,6 +431,12 @@ header a
 {
     text-decoration: none;
     color: var(--text-color);
+    transition: all .5s;
+}
+
+.toolbar__side a:hover
+{
+    color: #e6ebff;
 }
 
 .toolbar__side--expand

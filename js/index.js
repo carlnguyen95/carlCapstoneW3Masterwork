@@ -44,6 +44,14 @@ closeSearchBtn.addEventListener("click", () => {
   document.querySelector(".nav__search--bg").classList.add("d-none");
 })
 
+const toolbarExpandBtn = document.querySelector("#toolbarExpandId");
+const toolbarExpandIcon = document.querySelector("#toolbarExpandId i");
+const toolbarSide = document.querySelector("#toolbarSideId");
+toolbarExpandBtn.addEventListener("click", () => {
+  toolbarSide.classList.toggle("toolbar__side--hidden");
+  toolbarExpandIcon.classList.toggle("fa-angles-left");
+  toolbarExpandIcon.classList.toggle("fa-angles-right");
+})
 /**
  * Toggle expand faq_item button
  */

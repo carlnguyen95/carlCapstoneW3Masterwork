@@ -52,6 +52,7 @@ toolbarExpandBtn.addEventListener("click", () => {
   toolbarExpandIcon.classList.toggle("fa-angles-left");
   toolbarExpandIcon.classList.toggle("fa-angles-right");
 })
+
 /**
  * Toggle expand faq_item button
  */
